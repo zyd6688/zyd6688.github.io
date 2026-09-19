@@ -5,12 +5,23 @@
 <title>Music</title>
 </head>
 <body>
-<h1>纯放点小音乐，用了html5的audio元素</h1>
-<p>注意: Internet Explorer 8 及更早IE版本不支持 audio 元素</p>
-<p>示例文件，1000hz正弦波3s</p>
+<h1>纯放点小音乐，用了html5的audio元素，如果不支持，就换embed元素</h1>
+<p>注意: Internet Explorer 8 及更早IE版本不支持 audio 元素，但是ie3.0就支持了embed元素</p>
+<p>示例文件，1000hz正弦波5s</p>
 <audio controls height="100" width="100">
-	<source src="test.mp3" type="audio/mpeg">
-	<embed height="50" width="300" src="test.mp3">
+	<source src="Music/test.mp3" type="audio/mpeg">
+	<embed height="50" width="300" src="Music/test.mp3">
 	</audio>
+<p>Apologize - OneRepublic</p>
+	<audio controls height="100" width="100">
+	<source src="Music/Apologize - OneRepublic.mp3" type="audio/mpeg">
+	<embed height="50" width="300" src="Music/Apologize - OneRepublic.mp3">
+	</audio>
+<p>Love Story - Taylor Swift</p>
+	<audio controls height="100" width="100">
+	<source src="Music/Love Story - Taylor Swift.mp3" type="audio/mpeg">
+	<embed height="50" width="300" src="Music/Love Story - Taylor Swift.mp3">
+	</audio>
+<p></p>
 </body>
 </html>
