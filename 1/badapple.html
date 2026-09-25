@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bad Apple!!</title>
+</head>
+<body>
+
+<p>Bad Apple!!</p>
+<button onclick="myFunction()">Start</button>
+<p id="demo"></p>
+<script>
+function myFunction(){
+	var x;
+	var r=confirm("Press!");
+	if (r==true){
+		x="Start";
+                                window.location.replace("https://zyd6688.github.io/1/v.html");
+                                
+	}
+	else{
+		x="No start";
+                                var r=confirm("OK");
+                                window.close();
+                                
+	}
+	document.getElementById("demo").innerHTML=x;
+}
+</script>
+
+</body>
+</html>

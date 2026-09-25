@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #000;
+    overflow: hidden;
+  }
+
+  /* 视频铺满屏幕 */
+  video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    background: #000;
+    z-index: 1;
+  }
+
+  /* 遮罩弹窗 */
+  #mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* 弹窗里的按钮 */
+  #startBtn {
+    padding: 18px 48px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: #e50914;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(229, 9, 20, 0.5);
+    transition: transform 0.2s;
+  }
+  #startBtn:hover {
+    transform: scale(1.05);
+  }
+  #startBtn:active {
+    transform: scale(0.97);
+  }
+</style>
+</head>
+<body>
+
+<video id="v" src="movie.mp4" playsinline controls></video>
+
+<!-- 遮罩弹窗 -->
+<div id="mask">
+  <button id="startBtn">Start</button>
+</div>
+
+<script>
+  const v = document.getElementById('v');
+  const mask = document.getElementById('mask');
+  const btn = document.getElementById('startBtn');
+
+  btn.addEventListener('click', () => {
+    // 1. 隐藏遮罩
+    mask.style.display = 'none';
+
+    // 2. 取消静音，开声音
+    v.muted = false;
+    v.volume = 1;
+
+    // 3. 主动播放
+    v.play();
+
+    // 4. 主动全屏（真全屏）
+    if (v.requestFullscreen) {
+      v.requestFullscreen();
+    } else if (v.webkitRequestFullscreen) {
+      v.webkitRequestFullscreen();   // Safari
+    } else if (v.mozRequestFullScreen) {
+      v.mozRequestFullScreen();      // Firefox
+    } else if (v.msRequestFullscreen) {
+      v.msRequestFullscreen();       // IE/Edge
+    }
+  });
+</script>
+
+</body>
+</html>
