@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msvalidate.01" content="E0686C7CBB5DC9C8F187B65D5695310E" />
+    <title>Zyd's Website</title>
+    <style>
+        :root{
+            --bg:#0b0e14;
+            --panel:rgba(255,255,255,.035);
+            --line:rgba(255,255,255,.09);
+            --text:#dfe4ee;
+            --muted:#8f9bb3;
+            --cyan:#5eead4;
+            --blue:#7dd3fc;
+            --violet:#a78bfa;
+            --radius:16px;
+        }
+
+        *{box-sizing:border-box;}
+
+        html{scroll-behavior:smooth;}
+
+        body{
+            margin:0;
+            padding:0 18px;
+            min-height:100vh;
+            font-family:system-ui,-apple-system,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+            font-size:16px;
+            line-height:1.85;
+            color:var(--text);
+            background:
+                radial-gradient(900px 500px at 15% -10%, rgba(94,234,212,.10), transparent 65%),
+                radial-gradient(800px 500px at 85% 0%, rgba(167,139,250,.12), transparent 60%),
+                var(--bg);
+            background-attachment:fixed;
+            -webkit-font-smoothing:antialiased;
+        }
+
+        main{
+            max-width:740px;
+            margin:0 auto;
+            padding:56px 0 80px;
+            animation:fade .6s ease both;
+        }
+
+        @keyframes fade{
+            from{opacity:0;transform:translateY(12px);}
+            to{opacity:1;transform:none;}
+        }
+
+        h1{
+            margin:0 0 28px;
+            font-size:clamp(1.7rem,5.5vw,2.5rem);
+            line-height:1.35;
+            font-weight:800;
+            letter-spacing:.5px;
+            background:linear-gradient(100deg,var(--cyan),var(--blue) 55%,var(--violet));
+            -webkit-background-clip:text;
+            background-clip:text;
+            color:transparent;
+        }
+
+        p{
+            margin:0 0 12px;
+            color:#c3cbd9;
+        }
+
+        /* 正文里的普通链接 */
+        a{
+            color:var(--blue);
+            text-decoration:none;
+            border-bottom:1px solid rgba(125,211,252,.35);
+            transition:color .18s,border-color .18s;
+        }
+
+        a:hover{
+            color:var(--cyan);
+            border-bottom-color:var(--cyan);
+        }
+
+        /* 分组小标题 */
+        p.label{
+            margin:38px 0 14px;
+            padding-left:12px;
+            font-size:.82rem;
+            font-weight:600;
+            letter-spacing:.2em;
+            line-height:1.2;
+            color:var(--cyan);
+            border-left:3px solid var(--cyan);
+        }
+
+        /* 按钮式链接 */
+        a.pill{
+            display:inline-block;
+            margin:0 8px 10px 0;
+            padding:8px 18px;
+            font-size:.94rem;
+            border-radius:999px;
+            color:#a8d8f8;
+            background:rgba(125,211,252,.07);
+            border:1px solid rgba(125,211,252,.22);
+            transition:all .2s ease;
+        }
+
+        a.pill:hover{
+            color:#06121a;
+            background:linear-gradient(100deg,var(--cyan),var(--blue));
+            border-color:transparent;
+            transform:translateY(-2px);
+            box-shadow:0 8px 20px -8px rgba(94,234,212,.6);
+        }
+
+        /* 联系方式卡片 */
+        p.contact{
+            padding:16px 20px;
+            font-family:ui-monospace,SFMono-Regular,Consolas,"Courier New",monospace;
+            font-size:.9rem;
+            line-height:1.95;
+            color:#b6c0d0;
+            background:var(--panel);
+            border:1px solid var(--line);
+            border-radius:var(--radius);
+        }
+
+        /* 隐藏排版用的多余换行 */
+        br{display:none;}
+        p.contact br{display:inline;}
+
+        /* 页脚 */
+        footer{
+            margin-top:52px;
+            padding-top:20px;
+            border-top:1px solid var(--line);
+            text-align:center;
+            font-size:.85rem;
+            color:var(--muted);
+        }
+
+        footer a{
+            color:var(--muted);
+            border-bottom:1px dashed rgba(255,255,255,.2);
+        }
+
+        footer a:hover{
+            color:var(--cyan);
+            border-bottom-color:var(--cyan);
+        }
+
+        @media (max-width:520px){
+            body{padding:0 16px;font-size:15px;}
+            main{padding:36px 0 60px;}
+            a.pill{font-size:.88rem;padding:7px 14px;}
+        }
+    </style>
+</head>
+<body>
+<main>
+    <h1>helloworld!你好世界！</h1>
+
+    <p>Welcome ,This website is built using GitHub Pages.欢迎，这个网站用了GitHub搭建</p>
+    <p>This website currently only supports Chinese, please use your own webpage translator.本网站语言暂时仅支持中文，外国友人请自备网页翻译器</p>
+    <p>首先感谢菜鸟教程，由于我不会写代码，于是就翻你们的网站慢慢琢磨，菜鸟教程网址<a href="https://www.runoob.com/">这里</a> </p>
+    <p>对了你们也能看到这个网站简陋的不能行，对我是小白只会这样写，就当作复古风格罢。。。</p>
+    <p>另外提一嘴由于github在国内不开加速器访问极慢所以本站内容都会进行压缩</p>
+    <p>本站没啥用途，纯折腾html玩啊哈哈</p>
+
+    <p class="label">社交链接</p>
+    <a class="pill" href="https://space.bilibili.com/1221092174">我的b站</a>
+    <a class="pill" href="https://www.qrz.com/db/BD6KIS">我的QRZ(我也玩业余无线电)</a>
+    <a class="pill" href="https://github.com/zyd6688">我的Github</a>
+    <a class="pill" href="https://steamcommunity.com/id/zydishandsomeboy">我的Steam</a>
+
+    <p class="label">友情链接</p>
+    <a class="pill" href="https://xcdh666.wuaze.com/?i=1">星辰大海</a>（朋友的网站，随机图片利用了LoliAPI）
+
+    <p class="label">联系方式</p>
+    <p class="contact">我的qq:398783519 <br>Wechat:z91786767z <br>E-mall:398783519@qq.com <br>bd6kis@qq.com <br>zhouyiduo6688@foxmail.com</p>
+
+    <p class="label">本站链接</p>
+    <a class="pill" href="Webside/Blog.html">Blog</a>
+    <a class="pill" href="Webside/Photo.html">Photo</a>
+    <a class="pill" href="Webside/Music.html">Music</a>
+    <a class="pill" href="Webside/Game.html">Dsgame</a>
+    <a class="pill" href="1/badapple.html">Bad Apple!!</a>
+
+    <p>*Dsgame为deepseek（深度求索）写的小游戏，因为我不会写。。。</p>
+
+    <footer>
+        <a href="https://icp.gov.moe/?keyword=20266682/" target="_blank">萌ICP备20266682号</a>
+    </footer>
+</main>
+</body>
+</html>
